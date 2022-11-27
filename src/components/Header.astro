@@ -1,6 +1,6 @@
 <header
   id="top"
-  class="flex xl:justify-between items-center justify-center p-10 relative flex-col xl:flex-row xl:bg-transparent bg-headerBg mb-10"
+  class="flex xl:justify-between items-center justify-center relative flex-col xl:flex-row xl:bg-transparent bg-headerBg mb-10"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -15,23 +15,28 @@
   </svg>
   <div>
     <h1
-      class="text-xl font-light font-mono text-center mb-5 xl:mb-0 text-pink-500"
+      class="text-xl font-light font-mono text-center ml-10 mb-5 xl:mb-0 text-pink-500 xl:block hidden"
     >
       <a href="/">
-        ihor andrianov <span class="text-yellow-500">as</span>
-        <span class="text-red-500">WebDeveloper</span>
+        ihor andrianov <span class="text-yellow-500 xl:inline-block hidden"
+          >as</span
+        >
+        <span class="text-red-500 xl:inline-block hidden">WebDeveloper</span>
       </a>
     </h1>
   </div>
-  <nav class="xl:mr-10 mr-0">
+  <nav class="xl:mr-10 mr-0 p-5 z-10">
     <ul
       class="flex gap-12 tracking-wide font-mono justify-center items-center text-white"
     >
       <li>
-        <a class="py-10 text-pink-500" href="/about">About</a>
+        <a class="xl:py-10 text-pink-500" href="/about">About</a>
       </li>
       <li>
-        <a class="py-10 text-yellow-500" href="/#projects">Projects</a>
+        <a class="text-red-500 xl:hidden block" href="/">ihor andrianov</a>
+      </li>
+      <li>
+        <a class="xl:py-10 text-yellow-500" href="/#projects">Projects</a>
       </li>
     </ul>
   </nav>
