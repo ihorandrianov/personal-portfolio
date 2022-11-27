@@ -1,0 +1,101 @@
+---
+import { FooterPhrase } from '../FooterPhrase';
+import { ContactsDropdown } from './ContactsDropdown';
+---
+
+<section class="w-2/3 mt-24">
+  <article class="flex flex-col gap-5">
+    <h1 class="text-4xl font-mono tracking-wide">Ihor Andrianov</h1>
+    <ContactsDropdown client:load />
+    <h2 class="text-yellow-500 font-mono text-2xl">Summary</h2>
+    <p class="font-light mb-10">
+      After acquiring medical education <strong class="text-yellow-500"
+        >I do believe I can learn anything.</strong
+      >
+      Excellent communication skills from hours in the outpatient surgery cabinet.
+      Doing surgery is always about the team play, so I know how to be a good teammate.
+      Passionate about teaching. <strong class="text-yellow-500">In love</strong
+      > with complexity and <strong class="text-yellow-500">technology</strong>.
+      The more complex the task, the more interesting. Always seeking to improve
+      and broaden my knowledge. <strong class="text-yellow-500"
+        >Good at React</strong
+      >, love making some interactive animations. Willing to learn new UI
+      frameworks (Angular, Vue, Svelte). Lately I have been <strong
+        class="text-yellow-500">improving</strong
+      > my knowledge in the back-end. Comfortable with <strong
+        class="text-yellow-500">Node.JS, Express.JS, NestJS.</strong
+      >
+    </p>
+    <h2 class="text-pink-500 font-mono text-2xl">Knowledge</h2>
+    <p>
+      <ul class="flex flex-col gap-3 font-light mb-10">
+        <li>JavaScript, ES6, AJAX/Fetch, JSON, REST</li>
+        <li class="font-bold">React, Typescript</li>
+        <li>Development of cross-browser solutions</li>
+        <li>
+          HTML5/CSS3, SASS (SCSS), Bootstrap, <strong class="font-bold"
+            >TailwindCSS</strong
+          >
+        </li>
+        <li>Pixel-perfect, BEM methodology, FlexBox, Grid</li>
+        <li>Figma, Trello</li>
+        <li>
+          Proficient understanding of code versioning tool (Git), Visual Studio,
+          Chrome Development Tools
+        </li>
+        <li>
+          Still improving: Next.js, Astro, tRPC, Prisma, React query, Docker,
+          NestJS
+        </li>
+        <li class="font-bold">English C2</li>
+      </ul>
+    </p>
+    <h2 class="text-red-500 font-mono text-2xl">Job Experience</h2>
+    <p>
+      <strong class="text-xl tracking-wide">
+        Odessa National Medical University Clinic (Oncology unit),
+        Surgeon(2019-2022)
+      </strong>
+      <ul class="list-disc ml-5 font-light flex flex-col gap-3 mb-10">
+        <li>Outpatient services (outpatient operations, consultations)</li>
+        <li>
+          Inpatient services (major surgeries, postoperative care, complications
+          management, palliative care)
+        </li>
+        <li>
+          Science work(trial management, writing science papers, research papers
+          analysis)
+        </li>
+      </ul>
+    </p>
+    <h2 class="text-yellow-500 font-mono text-2xl">Education</h2>
+    <p class="text-xl tracking-wide font-bold mb-10">
+      Odessa National Medical University (2013-2019) Obtained qualification:
+      M.D. (Surgery)
+    </p>
+    <h2 class="text-pink-500 font-mono text-2xl">Additional education</h2>
+    <ul class="list-disc ml-5 font-light flex flex-col gap-3 mb-10">
+      <li>English C2 (Local english courses) 2012-2014</li>
+      <li>Mate-academy (full-stack-track) 2022</li>
+      <li>
+        Online: Codecademy(HTML, CSS, JS, React, Phaser.js, Python, Data-science
+        track), 2021
+      </li>
+      <li>Udemy (React, Redux), 2022</li>
+      <li>Scrimba(React), 2022</li>
+    </ul>
+    <h2 class="text-yellow-500 font-mono text-2xl">Achivements</h2>
+    <ul class="list-disc ml-5 font-light flex flex-col gap-3">
+      <li>RaceNation 2021 10km Bukovel finisher</li>
+      <li>Odessa Half-Marathon 2021 finisher</li>
+      <li>Codewars 5kyu</li>
+      <li>Publications in medical journals</li>
+    </ul>
+    <h2 class="text-xl text-blue-500 hover:text-blue-300">
+      <a
+        href="https://drive.google.com/uc?export=download&id=1uo-qsZfrIcBROovKvaYWdsQ9VEsnKkED"
+        >Download resume</a
+      >
+    </h2>
+  </article>
+</section>

@@ -1,0 +1,46 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+const projects = [
+  {
+    title: 'Landing',
+    img: '../../../images/landing.png',
+    description:
+      'The first project i did to learn basics of HTML/CSS. To make markup readable and maintainable i used BEM methodology. Also SASS preprocessor to make my life comfortable.',
+    link: 'https://github.com/ihorandrianov/landing-project',
+  },
+  {
+    title: 'Todo app',
+    img: '../../../images/todo-app.png',
+    description:
+      'Here i made todo app with React query for data fetching from api. Its fully interactive and some',
+    link: 'https://github.com/ihorandrianov/todo-app',
+  },
+  {
+    title: 'Ecomerce website',
+    img: '../../../images/coffe-shop.png',
+    description:
+      'Here is where things get real, full-stack e-commerce website with backend on tRPC and planetscale Db, some SSG and funky interactive animations. I faced a lot of challenges through this project, lets see how i handled them.',
+    link: 'https://github.com/ihorandrianov/ecoomerce-nextjs',
+  },
+];
+---
+
+<section class="xl:w-2/3 mx-5 xl:mx-0" id="projects">
+  <article class="mb-10">
+    <h1 class="text-4xl mb-5 font-extrabold tracking-wide">My projects</h1>
+    <p class="xl:w-1/2 trackin-wide">
+      Here is projects i do to learn new things.
+    </p>
+  </article>
+  {
+    projects.map((item) => (
+      <ProjectCard
+        title={item.title}
+        img={item.img}
+        description={item.description}
+        link={item.link}
+      />
+    ))
+  }
+</section>

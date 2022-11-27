@@ -26,34 +26,23 @@ export const SkillCard: FC<Props> = ({ imgLink }) => {
   const calcY = (y: number, ly: number) => {
     if (target.current) {
       const relY = y - target.current.getBoundingClientRect().top - 64 - ly;
-      return relY / 4;
+      return -relY / 2;
     }
   };
   const calcX = (x: number, lx: number) => {
     if (target.current) {
       const relX = x - target.current.getBoundingClientRect().left - 64 - lx;
-      return relX / 4;
+      return relX / 2;
     }
   };
-
-  useEffect(() => {
-    const preventDefault = (e: Event) => e.preventDefault();
-    document.addEventListener('gesturestart', preventDefault);
-    document.addEventListener('gesturechange', preventDefault);
-
-    return () => {
-      document.removeEventListener('gesturestart', preventDefault);
-      document.removeEventListener('gesturechange', preventDefault);
-    };
-  }, []);
 
   useGesture(
     {
       onPinch: ({ offset: [d, a] }) => api.start({ zoom: d / 200, rotateZ: a }),
       onMove: ({ event }) =>
         api.start({
-          rotateX: calcX(event.clientX, x.get()),
-          rotateY: calcY(event.clientY, y.get()),
+          rotateX: calcY(event.clientY, y.get()),
+          rotateY: calcX(event.clientX, x.get()),
           scale: 1.1,
         }),
       onHover: ({ hovering }) =>
@@ -63,7 +52,7 @@ export const SkillCard: FC<Props> = ({ imgLink }) => {
   );
 
   return (
-    <div className="m-10">
+    <div>
       <animated.img
         aria-label={imgLink}
         className="w-[128px] h-[128px] touch-none"
