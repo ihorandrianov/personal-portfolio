@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         bgc: '#182747',
         textCol: '#D8D8D8',
+        headerBg: '#647E68',
       },
     },
   },
